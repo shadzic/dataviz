@@ -1,7 +1,7 @@
 
 ################################################################
 ### print a decision tree
-from sklearn.tree import DecisionTreeRegressor, export_graphviz
+from sklearn.tree import DecisionTreeClassifier, export_graphviz
 import subprocess
 
 def visualize_tree(tree, tree_name, feature_names):
