@@ -3,6 +3,10 @@
 ### print a decision tree
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 import subprocess
+# brew install graphviz
+# pip install graphviz
+import graphviz 
+
 
 def visualize_tree(tree, tree_name, feature_names):
     """Create tree png using graphviz
@@ -25,7 +29,7 @@ def visualize_tree(tree, tree_name, feature_names):
         exit("Could not run dot, ie graphviz, to produce visualization")
 
 '''
-dt = DecisionTreeClassifier()
+dt = DecisionTreeClassifier(max_depth=4)
 dt.fit(X,y)
 
 visualize_tree(dt, 'dt_01', X.columns)
